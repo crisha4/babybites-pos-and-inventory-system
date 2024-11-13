@@ -1,0 +1,43 @@
+.login {
+  min-height: 100vh;
+}
+
+.login-heading {
+  font-weight: 400;
+  font-size: 40px;
+  color: #70C8F0;
+}
+
+.btn-login {
+  font-size: 1rem !important;
+  letter-spacing: 0.05rem;
+  margin-top: 20px;
+  padding: 0.75rem 1rem;
+  background-color: #70C8F0 !important;
+  border-color: #46b5e9 !important;
+}
+
+.btn-login:active{
+  background-color: #46b5e9 !important;
+}
+.btn-login:hover{
+  background-color: #46b5e9 !important;
+}
+
+.form-control{
+  border-radius: 15px !important;
+  border: 1px solid #70C8F0 !important;
+  margin-top: 30px;
+}
+form label{
+  color: #70C8F0;
+}
+.logo-bb{
+  object-fit: cover;
+  width: 400px;
+  height: 200px;
+  margin-left: 20px;
+}
+.pt-5, .py-5{
+  padding-top: 1rem !important;
+}

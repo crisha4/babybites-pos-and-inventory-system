@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap & Fonts -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/inventory.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@100;500;700&display=swap" rel="stylesheet">
+
+    <title>BABYBITES</title>
+
+    <link rel="icon" href="img/babybitezlogo.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="img/babybitezlogo.png" alt="Baby Bites">
+        </a>
+    </nav>
+
+    <!-- Main Content Area with Sidebars -->
+    <div class="main-content">
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <a href="menu.html" class="btn btn-light mb-3 py-3" style="margin-top: 60px;">Menu</a>
+            <a href="dashboard.html" class="btn btn-light mb-3 py-3">Dashboard</a>
+            <a href="ingredients.html" class="btn btn-light mb-3 py-3">Ingredients</a>
+            <a href="inventory.html" class="btn btn-light mb-3 py-3">Inventory</a>
+            <a href="sales.html" class="btn btn-light mb-3 py-3">Sales</a>
+            <a href="login.html" class="btn btn-danger mb-3 py-2">Logout</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="ingredients-container">
+                <div class="ingredients-header">
+                    <h5 style="color: #FF577F;">Inventory</h5>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" style="margin:0;" data-toggle="modal" data-target="#inventoryModal">Add Item</button>
+                        <input type="text" placeholder="Search" class="form-control">
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Item Name</th>
+                                <th>Unit Weight</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Unit</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Flour</td>
+                                <td>1 kg</td>
+                                <td>20</td>
+                                <td>$10</td>
+                                <td>kg</td>
+                                <td>
+                                    <button class="btn btn-edit">Edit</button>
+                                    <button class="btn btn-delete">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Sugar</td>
+                                <td>500 g</td>
+                                <td>30</td>
+                                <td>$5</td>
+                                <td>g</td>
+                                <td>
+                                    <button class="btn btn-edit">Edit</button>
+                                    <button class="btn btn-delete">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Butter</td>
+                                <td>200 g</td>
+                                <td>15</td>
+                                <td>$7</td>
+                                <td>g</td>
+                                <td>
+                                    <button class="btn btn-edit">Edit</button>
+                                    <button class="btn btn-delete">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="inventoryModal" tabindex="-1" aria-labelledby="inventoryModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="inventoryModalLabel">Inventory</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="itemName">Item Name:</label>
+                            <input type="text" class="form-control" id="itemName" placeholder="Item name">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="unitWeight">Unit Weight:</label>
+                                <input type="text" class="form-control" id="unitWeight" placeholder="Unit weight">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="quantity">Quantity:</label>
+                                <input type="text" class="form-control" id="quantity" placeholder="Quantity">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="unit">Unit:</label>
+                                <input type="text" class="form-control" id="unit" placeholder="Unit">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="price">Price:</label>
+                                <input type="text" class="form-control" id="price" placeholder="Price">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" style="width: 100px;">DELETE</button>
+                    <button type="button" class="btn btn-success" style="width: 100px;">EDIT</button>
+                    <button type="button" class="btn btn-primary" style="width: 100px;">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

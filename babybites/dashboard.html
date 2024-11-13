@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap & Fonts -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@100;500;700&display=swap" rel="stylesheet">
+
+    <title>BABYBITES</title>
+
+    <link rel="icon" href="img/babybitezlogo.png" type="image/x-icon">
+
+<style>
+    
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-light fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="img/babybitezlogo.png" alt="Baby Bites">
+    </a>
+</nav>
+
+<!-- Main Content Area with Sidebars -->
+<div class="main-content">
+    <!-- Left Sidebar -->
+    <div class="left-sidebar">
+        <a href="menu.html" class="btn btn-light mb-3 py-3" style="margin-top: 60px;">Menu</a>
+        <a href="dashboard.html" class="btn btn-light mb-3 py-3">Dashboard</a>
+        <a href="ingredients.html" class="btn btn-light mb-3 py-3">Ingredients</a>
+        <a href="inventory.html" class="btn btn-light mb-3 py-3">Inventory</a>
+        <a href="sales.html" class="btn btn-light mb-3 py-3">Sales</a>
+        <a href="login.html" class="btn btn-danger mb-3 py-2">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="container mt-5">
+            <div class="row summary-header">
+              <h5 style="color: #FF577F;">Summary Report</h5>
+                <div class="col-md-4 text-center">
+                    <img src="img/babybitezlogo.png" alt="Baby Bites">
+                </div>
+                <div class="col-md-8 card-container">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5>Sales</h5>
+                            <p>P5,678.90</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5>Cost</h5>
+                            <p>$4,678.90</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+                <!-- Tables -->
+                <div class="row table-container">
+                    <div class="col-md-4">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Toppings</th>
+                                    <th>Consumed</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Marshmallows</td>
+                                    <td>4321</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>Sprinkles</td>
+                                    <td>4033</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>Crushed Grahams</td>
+                                    <td>3128</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>Pretzels/Knots</td>
+                                    <td>2104</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>Java Chips</td>
+                                    <td>2003</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>White Choco Chips</td>
+                                    <td>405</td>
+                                    <td>45</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-4">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Flavors</th>
+                                    <th>Consumed</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dark Chocolate</td>
+                                    <td>4321</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>White Chocolate</td>
+                                    <td>4033</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>Milk Chocolate</td>
+                                    <td>3128</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>Strawberry</td>
+                                    <td>2104</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>Matcha</td>
+                                    <td>2003</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>Ube</td>
+                                    <td>405</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-4">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Stocked Supplies</th>
+                                    <th>Consumed</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Maya Mix</td>
+                                    <td>4321</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td>Plastic Tubs</td>
+                                    <td>4033</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>Sticks</td>
+                                    <td>3128</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>Eggs</td>
+                                    <td>2104</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>Oil</td>
+                                    <td>1894</td>
+                                    <td>500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    </div>
+</div>
+
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

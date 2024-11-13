@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap & Fonts -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@100;500;700&display=swap" rel="stylesheet">
+
+    <title>BABYBITES</title>
+
+    <link rel="icon" href="img/babybitezlogo.png" type="image/x-icon">
+
+    <style>
+        .modal-content {
+            border-radius: 15px;
+        }
+        .modal-header, .modal-footer {
+            border: none;
+        }
+        .receipt-modal .modal-body {
+            text-align: center;
+        }
+        .receipt-modal .btn-confirm {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-light fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="img/babybitezlogo.png" alt="Baby Bites">
+    </a>
+</nav>
+
+<!-- Main Content Area with Sidebars -->
+<div class="main-content">
+    <!-- Left Sidebar -->
+    <div class="left-sidebar">
+        <a href="menu.html" class="btn btn-light mb-3 py-3" style="margin-top: 60px;">Menu</a>
+        <a href="dashboard.html" class="btn btn-light mb-3 py-3">Dashboard</a>
+        <a href="ingredients.html" class="btn btn-light mb-3 py-3">Ingredients</a>
+        <a href="inventory.html" class="btn btn-light mb-3 py-3">Inventory</a>
+        <a href="sales.html" class="btn btn-light mb-3 py-3">Sales</a>
+        <a href="login.html" class="btn btn-danger mb-3 py-2">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="order-container">
+            <div class="order-header">
+                <h5>Order</h5>
+                <button type="button" class="btn btn-primary btn-order-add" style="margin: 0;">+</button>
+            </div>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="itemName">Item Name:</label>
+                        <select class="form-control" id="itemName">
+                            <option>P70 - 12 DONUTS 1 FLAVOR</option>
+                            <option>P70 - 12 DONUTS 1 FLAVOR</option>
+                            <option>P70 - 12 DONUTS 1 FLAVOR</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstFlavor">First Flavor:</label>
+                        <select class="form-control" id="firstFlavor">
+                            <option>Chocolate</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="secondFlavor">Second Flavor:</label>
+                        <select class="form-control" id="secondFlavor">
+                            <option>null</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="addOns1">Add ons:</label>
+                        <select class="form-control" id="addOns1">
+                            <option>Sprinkles</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="addOns2">Add ons:</label>
+                        <select class="form-control" id="addOns2">
+                            <option>Almonds</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-add">+</button>
+                </div>
+                <button type="button" class="btn btn-danger btn-remove">Remove</button>
+                <hr style="height: 2px; border:none;color:#a8d6fe;background-color:#a8d6fe;">
+            </form>
+        </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="right-sidebar">
+        <div class="receipt">
+            <h5>Receipt</h5>
+            <p>Dark Chocolate: $66.66</p>
+            <p>Sprinkles: $33.33</p>
+            <hr>
+            <p>Total: $99.99</p>
+            <p>Pay: $999.99</p>
+            <hr>
+            <p>Change: $900.00</p>
+            <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#receiptModal">Print Receipt</button>
+        </div>
+    </div>
+</div>
+
+<!-- Receipt Modal -->
+<div class="modal fade" id="receiptModal" tabindex="-1" role="dialog" aria-labelledby="receiptModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content receipt-modal">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Baby Bites Mini Donuts</h5>
+                <p>Blk Lot Street</p>
+                <p>City, Zipcode</p>
+                <p>Tel: 09xx-xxx-xxxx</p>
+                <hr>
+                <p>01/01/2024</p>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>10 Donuts 2 Flavors</td>
+                            <td>P70</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>10 Donuts 2 Flavors</td>
+                            <td>P70</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <p>Total Qty: 2</p>
+                <p>Bill Amount: P140.00</p>
+                <p>Pay: P200.00</p>
+                <p>Change: P60.00</p>
+                <hr>
+                <p>THANK YOU! PLEASE COME AGAIN!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-confirm" data-dismiss="modal" style="color: white;">CONFIRM</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
